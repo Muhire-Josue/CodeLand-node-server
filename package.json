@@ -53,6 +53,7 @@
     "sequelize-cli": "^5.5.1",
     "sequelize-test-helpers": "^1.2.2",
     "uuid": "^7.0.3",
+    "xlsx": "^0.18.5",
     "zombie": "^6.1.4"
   },
   "devDependencies": {
