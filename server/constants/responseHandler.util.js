@@ -18,9 +18,9 @@ const successResponse = (res, code, message, data = null) => res.status(code).js
  * @returns {object} response json object
  * @description Returns an error response
  */
-// const errorResponse = (res, code, error) => res.status(code).json({
-//   error,
-// });
+const errorResponse = (res, code, error) => res.status(code).json({
+  error,
+});
 
 /**
  * @param {object} res
@@ -36,6 +36,6 @@ const updatedResponse = async (res, code, message) => res.status(code).json({
 
 export default {
   successResponse,
-  // errorResponse,
+  errorResponse,
   updatedResponse,
 };
