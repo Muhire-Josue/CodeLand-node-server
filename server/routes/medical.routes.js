@@ -3,6 +3,6 @@ import medicalController from '../controllers/medical.controller';
 
 const route = express.Router();
 
-route.post('/medical', medicalController);
+route.get('/medical', medicalController);
 
 export default route;

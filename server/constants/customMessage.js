@@ -5,6 +5,8 @@ const messages = {
   userNotFound: 'User not found',
   userRegistered: 'User registered',
   authNotFound: 'Auth is not found',
-  invalidPassword: 'Invalid password',
+  invalidPassword: 'Incorrect password',
+  invalidGender: 'Incorrect gender',
+  invalidRole: 'Invalid role',
 };
 export default messages;
