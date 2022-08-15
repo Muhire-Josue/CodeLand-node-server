@@ -1,0 +1,90 @@
+{
+  "name": "codeland",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Rwabahizi Jonathan <jonathanrwabahizi@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "CI=false react-scripts build && echo '/* /index.html 200' > ./build/_redirects",
+    "prestart": "yarn build",
+    "start": "serve -s build",
+    "start:dev": "react-scripts start",
+    "ts-check": "npx tsc -p tsconfig.json",
+    "lint": "eslint ./src/**/*.{ts,tsx}",
+    "lint:fix": "eslint --fix ./src/**/*.{ts,tsx}",
+    "test": "react-scripts test --watchAll --env=jsdom --coverage -u",
+    "test:CI": "CI=false react-scripts test --env=jsdom --coverage -u",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "eject": "react-scripts eject"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn ts-check && lint-staged",
+      "pre-push": "git diff HEAD --quiet"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,json,jsx,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.13",
+    "@types/react": "^17.0.20",
+    "@types/react-dom": "^17.0.9",
+    "axios": "^0.25.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "5.0.0",
+    "redux": "^4.1.2",
+    "sass": "^1.49.7",
+    "sass-loader": "^12.4.0",
+    "serve": "^13.0.2",
+    "typescript": "^4.4.2",
+    "web-vitals": "^2.1.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react-router-dom": "^5.3.3",
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.11.0",
+    "cypress": "^9.4.1",
+    "eslint": "^8.8.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.3",
+    "prettier": "^2.5.1",
+    "redux-devtools-extension": "^2.13.9"
+  }
+}

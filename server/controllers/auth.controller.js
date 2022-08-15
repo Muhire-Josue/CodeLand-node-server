@@ -31,7 +31,7 @@ const validateUser = (user) => {
   ) {
     return false;
   }
-  if (!['Admin', 'Patient', 'Physician', 'Pharmacists'].includes(user.role)) {
+  if (!['admin', 'patient', 'physician', 'pharmacist'].includes(user.role)) {
     return false;
   }
   return true;

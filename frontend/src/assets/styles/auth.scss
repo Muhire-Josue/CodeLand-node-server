@@ -1,0 +1,71 @@
+#signup-form,
+#login-form {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 400px;
+  padding: 20px 30px 40px 30px;
+  margin: 150px auto;
+  border-top: 5px solid rgb(238, 187, 70);
+
+  -webkit-box-shadow: -1px 3px 18px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 3px 18px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 3px 18px 0px rgba(0, 0, 0, 0.75);
+
+  p {
+    font-size: 0.9em;
+  }
+
+  .submit-btn {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+    background-color: rgb(238, 187, 70);
+  }
+
+  .form-group {
+    margin: 15px auto;
+
+    label {
+      font-weight: bold;
+      font-size: 0.9em;
+    }
+
+    .input-group {
+      border: 1px solid #ccc;
+      border-radius: 2px;
+
+      .input-group-addon {
+        border: none;
+        border-right: 1px solid #ccc;
+        background-color: #fff
+      }
+
+      input {
+        padding-left: 10px;
+      }
+
+      i {
+        color: #000;
+      }
+    }
+
+    input {
+      padding: 3px;
+      width: 100%;
+      border: none;
+      border-radius: 0 5px 5px 0;
+    }
+  }
+
+  .dropdown-menu {
+    max-height: 90vh;
+    overflow: scroll;
+  }
+
+  .dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
